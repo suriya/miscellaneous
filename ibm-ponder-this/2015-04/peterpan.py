@@ -36,7 +36,6 @@ class PeterPan(object):
             for d in self.directions:
                 for i in itertools.count(start=1):
                     square = translate(h, d, i)
-                    print('square', square, file=sys.stderr)
                     if (square not in self.squares):
                         break
                     self.hooks2squares[(h, d)].add(square)
